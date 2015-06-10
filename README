@@ -1,0 +1,2 @@
+        wget https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf
+        awk -F '/' '{print $2}' < accelerated-domains.china.conf | python generate.py
