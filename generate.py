@@ -14,5 +14,5 @@ FORMAT= """
 #END
 """
 
-domain_lists = [x.strip() for x in sys.stdin.readlines()]
+domain_lists = [x.strip().replace('.', r'\.') for x in sys.stdin.readlines()]
 print FORMAT % ("\n".join(domain_lists))
